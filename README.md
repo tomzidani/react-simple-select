@@ -19,39 +19,46 @@ yarn add tz-react-simple-select
 ## Usage/Examples
 
 ```typescript
-import { FC, useState } from "react"
+import { FC, useState } from 'react'
 import { Select } from 'tz-react-simple-select'
 
 const App: FC<{}> = () => {
-    const [favoriteIceCreamFlavour, setFavoriteIceCreamFlavour] = useState<string>("")
+  const [favoriteIceCreamFlavour, setFavoriteIceCreamFlavour] = useState<string>('')
 
-    const favoriteIceCreamFlavourOpts = [
-        {
-            label: "Chocolate",
-            value: "chocolate"
-        },
-        {
-            label: "Vanilla",
-            value: "vanilla"
-        },
-        {
-            label: "Cookie",
-            value: "cookie"
-        },
-        {
-            label: "Mint",
-            value: "Mint"
-        }
-    ]
+  const favoriteIceCreamFlavourOpts = [
+    {
+      label: 'Chocolate',
+      value: 'chocolate',
+    },
+    {
+      label: 'Vanilla',
+      value: 'vanilla',
+    },
+    {
+      label: 'Cookie',
+      value: 'cookie',
+    },
+    {
+      label: 'Mint',
+      value: 'Mint',
+    },
+  ]
 
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setFavoriteIceCreamFlavour(e.target.value)
-    }
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFavoriteIceCreamFlavour(e.target.value)
+  }
 
-    return <div>
-    <h1>What's your favorite ice cream flavour ?</h1>
-    <Select options={favoriteIceCreamFlavourOpts} value={favoriteIceCreamFlavour} onChange={setFavoriteIceCreamFlavour}>
+  return (
+    <div>
+      <Select
+        label="What's your favorite ice cream flavour ?"
+        options={favoriteIceCreamFlavourOpts}
+        value={favoriteIceCreamFlavour}
+        onChange={setFavoriteIceCreamFlavour}
+        id='favoriteFlavour'
+      />
     </div>
+  )
 }
 
 export default App

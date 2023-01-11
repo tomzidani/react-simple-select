@@ -1,6 +1,6 @@
 {
   "name": "tz-react-simple-select",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "A Simple Select component for React.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
